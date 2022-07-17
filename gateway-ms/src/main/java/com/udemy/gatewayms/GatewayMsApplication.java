@@ -20,8 +20,8 @@ public class GatewayMsApplication {
 	public RouteLocator routes(RouteLocatorBuilder routeLocatorBuilder){
 		return routeLocatorBuilder
 				.routes()
-					.route(r -> r.path("/customers/**").uri("lb://customer-ms"))
-					.route(r -> r.path("/cards/**").uri("lb://card-ms"))
+					.route(r -> r.path("/api/customers/**").uri("lb://customer-ms"))
+					.route(r -> r.path("/api/cards/**").uri("lb://card-ms"))
 				.build();
 	}
 }

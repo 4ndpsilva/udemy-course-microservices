@@ -22,7 +22,7 @@ import java.util.Optional;
 
 @Slf4j
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/api/customers")
 @RequiredArgsConstructor
 public class CustomerController {
     private final CustomerService service;
