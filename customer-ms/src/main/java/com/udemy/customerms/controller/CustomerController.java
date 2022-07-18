@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-import javax.servlet.http.HttpServletRequest;
 import java.net.URI;
 import java.util.Optional;
 
@@ -27,12 +26,6 @@ import java.util.Optional;
 public class CustomerController {
     private final CustomerService service;
     private final CustomerMapper mapper;
-
-    @GetMapping
-    public String status(HttpServletRequest request){
-        log.info("#### MICROSERVICES ONLINE: {}", request.getRemoteHost());
-        return "ok";
-    }
 
     @PostMapping
     public ResponseEntity<Customer> save(@RequestBody CustomerRequestDTO requestDTO){

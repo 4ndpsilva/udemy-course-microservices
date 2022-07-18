@@ -22,6 +22,7 @@ public class GatewayMsApplication {
 				.routes()
 					.route(r -> r.path("/api/customers/**").uri("lb://customer-ms"))
 					.route(r -> r.path("/api/cards/**").uri("lb://card-ms"))
+					.route(r -> r.path("/api/credit-appraisers/**").uri("lb://credit-appraiser-ms"))
 				.build();
 	}
 }
