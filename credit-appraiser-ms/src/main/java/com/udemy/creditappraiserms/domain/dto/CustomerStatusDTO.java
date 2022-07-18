@@ -1,4 +1,4 @@
-package com.udemy.creditappraiserms.domain.entity;
+package com.udemy.creditappraiserms.domain.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CustomerStatus {
-    private CustomerData customerData;
-    private List<CustomerCard> cards;
+public class CustomerStatusDTO {
+    private CustomerDataDTO customerData;
+    private List<CustomerCardDTO> cards;
 }
