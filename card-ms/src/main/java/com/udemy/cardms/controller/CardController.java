@@ -32,7 +32,7 @@ public class CardController {
     }
 
     @GetMapping("/income/{income}")
-    public ResponseEntity<List<CardResponseDTO>> findCardsIncomeLessEqualThan(@PathVariable Long income){
+    public ResponseEntity<List<CardResponseDTO>> findCardsIncomeLessEqualThat(@PathVariable Long income){
         return ResponseEntity.ok(mapper.map(service.getCardsIncomeLessEqual(income)));
     }
 
