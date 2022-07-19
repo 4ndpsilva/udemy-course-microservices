@@ -1,5 +1,6 @@
 package com.udemy.creditappraiserms.infra;
 
+import com.udemy.creditappraiserms.domain.dto.CardDTO;
 import com.udemy.creditappraiserms.domain.dto.CustomerCardDTO;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
@@ -12,4 +13,7 @@ import java.util.List;
 public interface CardResourceClient {
     @GetMapping("/customer-cards/cpf/{cpf}")
     ResponseEntity<List<CustomerCardDTO>> findByCPF(@PathVariable String cpf);
+
+    @GetMapping("/income/{income}")
+    ResponseEntity<List<CardDTO>> findCardsIncomeLessEqualThan(@PathVariable Long income);
 }

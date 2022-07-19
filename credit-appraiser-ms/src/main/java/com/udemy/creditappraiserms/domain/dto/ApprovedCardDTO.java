@@ -5,8 +5,8 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class CustomerCardDTO {
-    private String name;
+public class ApprovedCardDTO {
+    private String card;
     private String flag;
-    private BigDecimal freeLimit;
+    private BigDecimal limit;
 }
